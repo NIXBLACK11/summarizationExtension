@@ -1,6 +1,4 @@
-from django.shortcuts import render
-
-# Create your views here.
+import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from transformers import pipeline
@@ -13,7 +11,10 @@ summarizer = pipeline("summarization", model=model_name, revision=model_revision
 def summarize_text(request):
     if request.method == 'POST':
         try:
-            input_text = request.POST.get('input_text', '')
+            # Parse the JSON data from the request body
+            data = json.loads(request.body.decode('utf-8'))
+            input_text = data.get('input_text', '')
+
             if input_text:
                 summary = summarizer(input_text, max_length=150, min_length=40, do_sample=False)
                 summarized_text = summary[0]['summary_text']

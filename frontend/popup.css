@@ -1,12 +1,21 @@
 body {
+    width: 300px;
     font-family: Arial, sans-serif;
     text-align: center;
   }
   
+  textarea {
+    width: 100%; /* Make the textareas expand to fill the available width */
+    height: 150px; /* Adjust the height as needed */
+    margin: 5px 0; /* Add some margin between elements */
+  }
+
   h1 {
     color: #333;
   }
-  
+  button {
+      width: 100%; /* Make the button fill the available width */
+    }
   button {
     background-color: #0078d4;
     color: white;

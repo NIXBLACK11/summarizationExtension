@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Chrome Extension</title>
+  <title>Chrome extension to sumarize a web page</title>
   <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-  <h1>Hello, Chrome Extension!</h1>
-  <button id="clickMe">Click Me</button>
+  <h1>Click on the button to see the summary</h1>
+  <textarea id="inputText" placeholder="Enter text to summarize"></textarea>
+  <button id="summarizeButton">Summarize</button>
+  <textarea id="outputText" placeholder="Summarized text will appear here" readonly></textarea>
   <script src="popup.js"></script>
 </body>
 </html>
