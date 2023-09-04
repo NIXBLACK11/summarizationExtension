@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  const pageContent = document.body.textContent;
-
-  console.log(pageContent);
-
   // Get references to the input and output textareas and the button
   var inputTextarea = document.getElementById('inputText');
   var outputTextarea = document.getElementById('outputText');
